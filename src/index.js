@@ -4,14 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { configureStore } from "@reduxjs/toolkit";
-import todosReducer from "./redux/TodoSlice";
-
-const store = configureStore({
-  reducer: {
-    todos: todosReducer,
-  },
-});
+import { store } from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
