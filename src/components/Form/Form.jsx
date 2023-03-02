@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/TodoSlice";
 import { nanoid } from "nanoid";
-import { ErrorMessage, Formik } from "formik";
+import css from "./Form.module.css";
 
 export const Form = () => {
   const [title, setTitle] = useState("");
@@ -51,23 +51,27 @@ export const Form = () => {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={title}
-        name="title"
-        placeholder="Title"
-        required
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        value={descript}
-        name="descript"
-        placeholder="Description"
-        required
-        onChange={handleChange}
-      />
+    <div className={css.formContainer}>
+      <div className={css.formInput}>
+        <input
+          type="text"
+          value={title}
+          name="title"
+          placeholder="Title"
+          required
+          onChange={handleChange}
+        />
+        <textarea
+          type="text"
+          value={descript}
+          name="descript"
+          placeholder="Description"
+          required
+          onChange={handleChange}
+          rows="10"
+          col="500"
+        />
+      </div>
       <button onClick={handleSubmit}>Create</button>
     </div>
   );

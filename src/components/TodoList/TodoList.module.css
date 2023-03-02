@@ -1,0 +1,54 @@
+.tableList {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #00000033;
+    border-collapse: collapse;
+}
+
+dy td::first-letter {
+    text-transform: uppercase;
+}
+
+.tableList thead {
+    background-color: rgb(45, 180, 214);
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 7px 7px 0 0;
+}
+
+.tableList thead th {
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.tableList thead th:last-child {
+    border-right: none;
+}
+
+.tableList thead th:first-of-type {
+    border-top-left-radius: 7px;
+}
+
+.tableList thead th:last-of-type {
+    border-top-right-radius: 7px;
+}
+
+.tableList tbody tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+.tableList tbody td {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    
+    
+}
+
+.tableList tbody td:last-child {
+    border-right: none;
+}

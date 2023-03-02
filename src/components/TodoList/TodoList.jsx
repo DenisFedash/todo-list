@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import css from "./TodoList.module.css";
 
 import { TodoItem } from "../TodoItem/TodoItem";
 
@@ -8,7 +9,7 @@ export const TodoList = () => {
 
   return (
     <>
-      <div className="list-name">
+      {/* <div className="list-name">
         <h2>ID</h2>
         <h2>TITLE</h2>
         <h2>DESCRIPTION</h2>
@@ -26,7 +27,27 @@ export const TodoList = () => {
             index={index}
           />
         ))}
-      </ol>
+      </ol> */}
+      <table className={css.tableList}>
+        <thead>
+          <tr>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
+            <th>STATUS</th>
+          </tr>
+        </thead>
+        <tbody>
+          {todos.map(({ id, title, descript, completed }) => (
+            <TodoItem
+              key={id}
+              id={id}
+              title={title}
+              descript={descript}
+              completed={completed}
+            />
+          ))}
+        </tbody>
+      </table>
     </>
   );
 };

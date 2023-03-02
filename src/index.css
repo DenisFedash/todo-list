@@ -32,7 +32,7 @@ margin: auto;
 }
 
 .item-text{
-  display: block;
+  display: inline-block;
   width: 150px;
   overflow: hidden;
   white-space: nowrap;

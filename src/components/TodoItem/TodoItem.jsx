@@ -13,21 +13,21 @@ export const TodoItem = ({ title, descript, id, completed, index }) => {
 
   return (
     <>
-      <li>
-        <div className="item-todo">
-          <p>{index}</p>
-          <p>{title}</p>
-          <p onClick={() => setModalOpen(true)} className="item-text">
-            {descript}
-          </p>
+      <tr>
+        <td>{title}</td>
+        <td onClick={() => setModalOpen(true)}>
+          <div className="item-text">{descript}</div>
+        </td>
 
+        <td>
           <input
             type="checkbox"
             checked={completed}
             onChange={handleCheckboxClick}
-          ></input>
-        </div>
-      </li>
+          />
+        </td>
+      </tr>
+
       <Modal
         title={title}
         descript={descript}
