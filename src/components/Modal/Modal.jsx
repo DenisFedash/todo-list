@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 
 export const Modal = ({ title, descript, modalOpen, setModalOpen }) => {
